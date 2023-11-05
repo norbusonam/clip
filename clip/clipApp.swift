@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct clipApp: App {
-    @State private var clipboardItems = [String]()
+    @State private var clipboardItems = ["AAA", "BBB", "CCC"]
     
     func quitApp() {
         NSApplication.shared.terminate(self)
@@ -20,7 +20,11 @@ struct clipApp: App {
         pasteboard.declareTypes([.string], owner: nil)
         pasteboard.setString(item, forType: .string)
     }
-
+    
+    func clearHistory() {
+        clipboardItems.removeAll()
+    }
+    
     var body: some Scene {
         MenuBarExtra("Clip", systemImage: "clipboard") {
             VStack {
@@ -32,6 +36,10 @@ struct clipApp: App {
                 if clipboardItems.isEmpty {
                     Text("No history")
                 }
+                Divider()
+                Button(action: clearHistory) {
+                    Text("Clear history")
+                }.disabled(clipboardItems.isEmpty)
                 Button(action: quitApp) {
                     Text("Quit")
                 }
