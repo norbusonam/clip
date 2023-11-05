@@ -34,11 +34,11 @@ struct clipApp: App {
                     }
                 }
                 if clipboardItems.isEmpty {
-                    Text("No history")
+                    Text("No History")
                 }
                 Divider()
                 Button(action: clearHistory) {
-                    Text("Clear history")
+                    Text("Clear History")
                 }.disabled(clipboardItems.isEmpty)
                 Button(action: quitApp) {
                     Text("Quit")
