@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct clipApp: App {
-    @State private var clipboardItems = ["AAA", "BBB", "CCC"]
+    @State private var clipboardItems = [String]()
     
     func quitApp() {
         NSApplication.shared.terminate(self)
@@ -28,6 +28,9 @@ struct clipApp: App {
                     Button(action: { copyToClipboard(clipboardItem) }) {
                         Text(clipboardItem)
                     }
+                }
+                if clipboardItems.isEmpty {
+                    Text("No history")
                 }
                 Button(action: quitApp) {
                     Text("Quit")
