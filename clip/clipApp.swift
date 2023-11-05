@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct clipApp: App {
+    func quitApp() {
+        NSApplication.shared.terminate(self)
+    }
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("Clip", systemImage: "clipboard") {
+            Text("Hello, world")
+            Button(action: quitApp) {
+                Text("Quit")
+            }
         }
     }
 }

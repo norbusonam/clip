@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0750E55A2AF759A00082C61F /* clipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750E5592AF759A00082C61F /* clipApp.swift */; };
-		0750E55C2AF759A00082C61F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750E55B2AF759A00082C61F /* ContentView.swift */; };
 		0750E55E2AF759A10082C61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0750E55D2AF759A10082C61F /* Assets.xcassets */; };
 		0750E5612AF759A10082C61F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0750E5602AF759A10082C61F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		0750E5562AF759A00082C61F /* clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0750E5592AF759A00082C61F /* clipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipApp.swift; sourceTree = "<group>"; };
-		0750E55B2AF759A00082C61F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0750E55D2AF759A10082C61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0750E5602AF759A10082C61F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0750E5622AF759A10082C61F /* clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = clip.entitlements; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				0750E5592AF759A00082C61F /* clipApp.swift */,
-				0750E55B2AF759A00082C61F /* ContentView.swift */,
 				0750E55D2AF759A10082C61F /* Assets.xcassets */,
 				0750E5622AF759A10082C61F /* clip.entitlements */,
 				0750E55F2AF759A10082C61F /* Preview Content */,
@@ -139,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0750E55C2AF759A00082C61F /* ContentView.swift in Sources */,
 				0750E55A2AF759A00082C61F /* clipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
