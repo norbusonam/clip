@@ -9,15 +9,29 @@ import SwiftUI
 
 @main
 struct clipApp: App {
+    @State private var clipboardItems = ["AAA", "BBB", "CCC"]
+    
     func quitApp() {
         NSApplication.shared.terminate(self)
+    }
+    
+    func copyToClipboard(_ item: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(item, forType: .string)
     }
 
     var body: some Scene {
         MenuBarExtra("Clip", systemImage: "clipboard") {
-            Text("Hello, world")
-            Button(action: quitApp) {
-                Text("Quit")
+            VStack {
+                ForEach(clipboardItems, id: \.self) { clipboardItem in
+                    Button(action: { copyToClipboard(clipboardItem) }) {
+                        Text(clipboardItem)
+                    }
+                }
+                Button(action: quitApp) {
+                    Text("Quit")
+                }
             }
         }
     }
